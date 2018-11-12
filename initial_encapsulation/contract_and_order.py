@@ -25,6 +25,7 @@ def order_limit(action:str, quantity:float, lmtPrice:float):
     order.orderType = "LMT"
     order.totalQuantity = quantity
     order.lmtPrice = lmtPrice
+    order.transmit = True
     return order
 
 def order_stop_market(action:str, quantity:float, stopPrice:float):
@@ -34,6 +35,7 @@ def order_stop_market(action:str, quantity:float, stopPrice:float):
     order.orderType = "STP LMT"
     order.totalQuantity = quantity
     order.auxPrice = stopPrice
+    order.transmit = True
     return order
 
 def order_stop_limit(action:str, quantity:float, stopPrice:float, lmtPrice:float):
@@ -44,6 +46,7 @@ def order_stop_limit(action:str, quantity:float, stopPrice:float, lmtPrice:float
     order.totalQuantity = quantity
     order.auxPrice = stopPrice
     order.lmtPrice = lmtPrice
+    order.transmit = True
     return order
 
 def order_trail_stop_market():
