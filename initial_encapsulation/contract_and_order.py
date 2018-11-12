@@ -1,0 +1,1 @@
+def contract_EURUSD
